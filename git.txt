@@ -1,0 +1,109 @@
+
+---------------------------------------
+git init
+
+Create a new Git repository. Run this command under any folder which will be turned into a repository.
+It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository. Most other Git commands are not available outside of an initialized repository, so this is usually the first command you'll run in a new project.
+
+$ git init
+
+Transform the current directory into a Git repository. 
+
+Executing git init creates a .git subdirectory in the current working directory, which contains all of the necessary Git metadata for the new repository, makes it possible to start recording revisions of the project. This metadata includes subdirectories for objects, refs, and template files. A HEAD file is also created which points to the currently checked out commit.
+
+If you've already run git init on a project directory and it contains a .git subdirectory, you can safely run git init again on the same project directory. It will not override an existing .git configuration.
+
+
+
+$ git init <directory>
+
+Create an empty Git repository in the specified directory.
+
+---------------------------------------
+
+diff
+
+When using git, diff is very useful.
+diff always use the original line number of the first file, and the final line number of the second file.
+
+git_test.txt before change:
+d
+sff
+sd
+d
+
+git_test.txt after change:
+d
+sff
+333
+sd
+d
+
+
+$ git diff git_test.txt
+diff --git a/git_test.txt b/git_test.txt
+index 28601b2..319d53d 100644
+--- a/git_test.txt
++++ b/git_test.txt
+@@ -1,4 +1,5 @@
+ ﻿d
+ sff
++333
+ sd
+ d
+
+-1,4 means: first file, total 4 lines
++1,5 means: second file, total 5 lines
++333 means: add line, content is: 333
+
+
+
+git_test.txt after change again:
+d
+sff
+333dsf
+sd
+d
+
+
+$ git diff git_test.txt
+diff --git a/git_test.txt b/git_test.txt
+index 319d53d..f1d874a 100644
+--- a/git_test.txt
++++ b/git_test.txt
+@@ -1,5 +1,5 @@
+ ﻿d
+ sff
+-333
++333dsf
+ sd
+ d
+
+-1,5 means: first file, total 5 lines
++1,5 means: second file, total 5 lines
+-333 means: delete line, content is: 333
++333dsf means: add line， content is: 333dsf
+
+---------------------------------------
+
+
+
+---------------------------------------
+
+git init vs. git clone
+
+A quick note: git init and git clone can be easily confused. At a high level, they can both be used to "initialize a new git repository." However, git clone is dependent on git init. git clone is used to create a copy of an existing repository. Internally, git clone first calls git init to create a new repository. It then copies the data from the existing repository, and checks out a new set of working files.
+
+---------------------------------------
+
+
+---------------------------------------
+
+
+---------------------------------------
+
+
+---------------------------------------
+
+
+---------------------------------------
