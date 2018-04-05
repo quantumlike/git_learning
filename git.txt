@@ -1,5 +1,9 @@
 2018.4.5
 
+
+No Windows Notpad.
+Using Notepad++ with UTF-8 without BOM.
+
 ---------------------------------------
 git init
 
@@ -21,6 +25,31 @@ $ git init <directory>
 Create an empty Git repository in the specified directory.
 
 ---------------------------------------
+
+git add
+
+Create a file, git_test.txt, and put it under the <directory>, or under the subfolder of <directory>.
+
+git_test.txt original:
+d
+sff
+sd
+d
+
+$ git status
+
+$ git add readme.txt
+$ git status
+$ git commit -m "wrote a readme file"
+$ git status
+
+or:
+$ git add file1.txt
+$ git add file2.txt file3.txt
+$ git commit -m "add 3 files."
+
+---------------------------------------
+
 
 diff
 
