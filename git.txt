@@ -26,13 +26,13 @@ diff
 When using git, diff is very useful.
 diff always use the original line number of the first file, and the final line number of the second file.
 
-git_test.txt before change:
+git_test.txt original:
 d
 sff
 sd
 d
 
-git_test.txt after change:
+git_test.txt after changing:
 d
 sff
 333
@@ -58,7 +58,7 @@ index 28601b2..319d53d 100644
 
 
 
-git_test.txt after change again:
+git_test.txt after changing again:
 d
 sff
 333dsf
