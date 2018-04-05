@@ -126,6 +126,13 @@ A quick note: git init and git clone can be easily confused. At a high level, th
 
 ---------------------------------------
 
+git log
+git revert commit_id
+
+
+Don't use reset:
+git reflog
+git reset --hard commit_id
 
 ---------------------------------------
 
